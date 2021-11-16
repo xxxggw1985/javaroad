@@ -1,0 +1,9 @@
+<beans>
+    <bean id="rateLimiter" class="com.javaroad.di.RateLimiter">
+        <constructor-arg ref="redisCounter"/>
+    </bean>
+    <bean id="redisCounter" class="com.javaroad.di.RedisCounter">
+        <constructor-arg type="String" value="127.0.0.1"/>
+        <constructor-arg type="int" value="8080"/>
+    </bean>
+</beans>

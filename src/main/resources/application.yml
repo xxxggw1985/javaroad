@@ -1,0 +1,16 @@
+spring:
+  # 数据库
+  datasource:
+    url: jdbc:mysql://pre.yunjinji.cn:3306/demo?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false
+    username: xiezx
+    password: Yunjinji@2020
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 60
+      max-lifetime: 1000000
+      connection-test-query: SELECT 1
+      idle-timeout: 600000
+      connection-timeout: 60000
+      validation-timeout: 3000
+      login-timeout: 5
